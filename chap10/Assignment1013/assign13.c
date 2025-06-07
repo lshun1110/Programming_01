@@ -1,12 +1,12 @@
-/* ÆÄÀÏ¸í: assign13.c
+/* íŒŒì¼ëª…: assign13.c
 
-  * ³»¿ë: Á÷»ç°¢ÇüÀÇ ÁÂÇÏ´ÜÁ¡°ú ¿ì»ó´ÜÁ¡À» ±¸Á¶Ã¼ Æ÷ÀÎÅÍ¸¦ »ç¿ëÇØ ÀÛ¼ºÇØ¶ó.
+  * ë‚´ìš©: ì§ì‚¬ê°í˜•ì˜ ì¢Œí•˜ë‹¨ì ê³¼ ìš°ìƒë‹¨ì ì„ êµ¬ì¡°ì²´ í¬ì¸í„°ë¥¼ ì‚¬ìš©í•´ ìž‘ì„±í•´ë¼.
 
-  * ÀÛ¼ºÀÚ: ÀÌ½ÂÈÆ
+  * ìž‘ì„±ìž: ì´ìŠ¹í›ˆ
 
-  * ³¯Â¥: 2025.05.31
+  * ë‚ ì§œ: 2025.06.07
 
-  * ¹öÀü: v1.0
+  * ë²„ì „: v1.0
 
   */
 
@@ -24,7 +24,7 @@ typedef struct rect
     POINT left_bottom;
     POINT right_top;
 } RECT;
-// Èì ±¸Á¶Ã¼ ¼±¾ð ¼ø¹ø Á¶½É ÇØ¾ßÇÒµí?
+// í  êµ¬ì¡°ì²´ ì„ ì–¸ ìˆœë²ˆ ì¡°ì‹¬ í•´ì•¼í• ë“¯?
 
 void print_rect(RECT* r);
 void Assignment1013();
@@ -39,10 +39,10 @@ void Assignment1013()
 {
     RECT r;
 
-    printf("Á÷»ç°¢ÇüÀÇ ÁÂÇÏ´ÜÁ¡(x, y)? ");
+    printf("ì§ì‚¬ê°í˜•ì˜ ì¢Œí•˜ë‹¨ì (x, y)? ");
     scanf("%d %d", &r.left_bottom.x, &r.left_bottom.y);
 
-    printf("Á÷»ç°¢ÇüÀÇ ¿ì»ó´ÜÁ¡(x, y)? ");
+    printf("ì§ì‚¬ê°í˜•ì˜ ìš°ìƒë‹¨ì (x, y)? ");
     scanf("%d %d", &r.right_top.x, &r.right_top.y);
 
     print_rect(&r);
@@ -50,5 +50,5 @@ void Assignment1013()
 
 void print_rect(RECT* r) 
 {
-    printf("[RECT ÁÂÇÏ´ÜÁ¡:(%d, %d) ¿ì»ó´ÜÁ¡:(%d, %d)]\n", r->left_bottom.x, r->left_bottom.y, r->right_top.x, r->right_top.y);
+    printf("[RECT ì¢Œí•˜ë‹¨ì :(%d, %d) ìš°ìƒë‹¨ì :(%d, %d)]\n", r->left_bottom.x, r->left_bottom.y, r->right_top.x, r->right_top.y);
 }
