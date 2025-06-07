@@ -1,12 +1,12 @@
-/* ÆÄÀÏ¸í: assign08.c
+/* íŒŒì¼ëª…: assign08.c
 
-  * ³»¿ë: Ä¿ÇÇ¼ó¿¡ Àç°í¿Í °¡°İÀ» Ãâ·ÂÇÏ´Â ±¸Á¶Ã¼¸¦ ¼±¾ğÇÏ¶ó.
+  * ë‚´ìš©: ì»¤í”¼ìˆì— ì¬ê³ ì™€ ê°€ê²©ì„ ì¶œë ¥í•˜ëŠ” êµ¬ì¡°ì²´ë¥¼ ì„ ì–¸í•˜ë¼.
 
-  * ÀÛ¼ºÀÚ: ÀÌ½ÂÈÆ
+  * ì‘ì„±ì: ì´ìŠ¹í›ˆ
 
-  * ³¯Â¥: 2025.05.31
+  * ë‚ ì§œ: 2025.06.07
 
-  * ¹öÀü: v1.0
+  * ë²„ì „: v1.0
 
   */
 
@@ -36,13 +36,13 @@ void Assignment1008()
 {
     PRODUCT coffee;
 
-    printf("Á¦Ç°¸í? ");
+    printf("ì œí’ˆëª…? ");
     scanf("%s", coffee.name);
 
-    printf("°¡°İ? ");
+    printf("ê°€ê²©? ");
     scanf("%d", &coffee.price);
 
-    printf("Àç°í? ");
+    printf("ì¬ê³ ? ");
     scanf("%d", &coffee.stock);
 
     Printproduct(&coffee);
@@ -52,6 +52,6 @@ void Assignment1008()
 
 void Printproduct(PRODUCT* p) 
 {
-    printf("[%s %d¿ø Àç°í: %d]\n", p->name, p->price, p->stock);
+    printf("[%s %dì› ì¬ê³ : %d]\n", p->name, p->price, p->stock);
     return;
 }
