@@ -1,12 +1,12 @@
-/* ÆÄÀÏ¸í: assign18.c
+/* íŒŒì¼ëª…: assign18.c
 
-  * ³»¿ë: À½¿øÀÇ ÇÃ·¹ÀÌ¸®½ºÆ®¿Í ±× Àç»ı½Ã°£À» Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇØ¶ó.
+  * ë‚´ìš©: ìŒì›ì˜ í”Œë ˆì´ë¦¬ìŠ¤íŠ¸ì™€ ê·¸ ì¬ìƒì‹œê°„ì„ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•´ë¼.
 
-  * ÀÛ¼ºÀÚ: ÀÌ½ÂÈÆ
+  * ì‘ì„±ì: ì´ìŠ¹í›ˆ
 
-  * ³¯Â¥: 2025.05.31
+  * ë‚ ì§œ: 2025.06.07
 
-  * ¹öÀü: v1.0
+  * ë²„ì „: v1.0
 
   */
 
@@ -40,12 +40,12 @@ void Assignment1018()
     SONG songs[MAX] = {
         {"thank u, next", "Ariana Grande", "pop", 208},
         {"Attention", "Charlie Puth", "pop", 211},
-        {"º° º¸·¯ °¡ÀÚ", "¹Úº¸°Ë", "ballad", 316},
+        {"ë³„ ë³´ëŸ¬ ê°€ì", "ë°•ë³´ê²€", "ballad", 316},
         {"How Long", "Charlie Puth", "pop", 198},
-        {"I'm Fine", "¹æÅº¼Ò³â´Ü", "hip-hop", 209},
-        {"º½³¯", "¹æÅº¼Ò³â´Ü", "hip-hop", 274},
-        {"Awake", "¹æÅº¼Ò³â´Ü", "ballad", 226},
-        {"¾Æ³«³×", "MINO", "balled", 241}
+        {"I'm Fine", "ë°©íƒ„ì†Œë…„ë‹¨", "hip-hop", 209},
+        {"ë´„ë‚ ", "ë°©íƒ„ì†Œë…„ë‹¨", "hip-hop", 274},
+        {"Awake", "ë°©íƒ„ì†Œë…„ë‹¨", "ballad", 226},
+        {"ì•„ë‚™ë„¤", "MINO", "balled", 241}
     };
 
     SONG* playlist[5] = { NULL };
@@ -54,14 +54,14 @@ void Assignment1018()
     int choice;
     int arr[MAX] = { 0 };
     
-    printf("\nÀüÃ¼ °î ¸ñ·Ï\n");
+    printf("\nì „ì²´ ê³¡ ëª©ë¡\n");
     PrintSonglist(songs, MAX);
 
-    // Á¶°Ç ÀÚÃ¼¸¦ ¼ıÀÚ·Î °É¸é Á¶±İ ´Ş¶óÁü;;
+    // ì¡°ê±´ ìì²´ë¥¼ ìˆ«ìë¡œ ê±¸ë©´ ì¡°ê¸ˆ ë‹¬ë¼ì§;;
 
     while (1) 
     {
-        printf("\nÇÃ·¹ÀÌ¸®½ºÆ®¿¡ Ãß°¡ÇÒ °î ¹øÈ£?: ");
+        printf("\ní”Œë ˆì´ë¦¬ìŠ¤íŠ¸ì— ì¶”ê°€í•  ê³¡ ë²ˆí˜¸?: ");
         scanf("%d", &choice);
 
         if (choice == 0) 
@@ -69,19 +69,19 @@ void Assignment1018()
 
         if (choice < 1 || choice > MAX) 
         {
-            printf("Àß¸øµÈ °î ¹øÈ£ÀÔ´Ï´Ù.\n");
+            printf("ì˜ëª»ëœ ê³¡ ë²ˆí˜¸ì…ë‹ˆë‹¤.\n");
             continue;
         }
 
         if (arr[choice - 1]) 
         {
-            printf("ÀÌ¹Ì Ãß°¡µÈ °îÀÔ´Ï´Ù.\n");
+            printf("ì´ë¯¸ ì¶”ê°€ëœ ê³¡ì…ë‹ˆë‹¤.\n");
             continue;
         }
 
         if (count >= 5) 
         {
-            printf("ÇÃ·¹ÀÌ¸®½ºÆ®°¡ °¡µæ Ã¡½À´Ï´Ù.\n");
+            printf("í”Œë ˆì´ë¦¬ìŠ¤íŠ¸ê°€ ê°€ë“ ì°¼ìŠµë‹ˆë‹¤.\n");
             continue;
         }
 
@@ -97,7 +97,7 @@ void PrintSonglist(SONG* songs, int size)
 {
     for (int i = 0; i < size; i++) 
     {
-        printf("%2d. %-20s %-15s %-10s %4dÃÊ\n", i + 1, songs[i].title, songs[i].artist, songs[i].genre, songs[i].play_time);
+        printf("%2d. %-20s %-15s %-10s %4dì´ˆ\n", i + 1, songs[i].title, songs[i].artist, songs[i].genre, songs[i].play_time);
     }
 }
 
@@ -105,13 +105,13 @@ void PrintPlaylist(SONG* playlist[], int size)
 {
     int total_time = 0;
 
-    printf("\n<<ÇÃ·¹ÀÌ¸®½ºÆ®>>\n");
+    printf("\n<<í”Œë ˆì´ë¦¬ìŠ¤íŠ¸>>\n");
 
     for (int i = 0; i < size; i++) 
     {
-        printf("%2d. %-20s %-15s %-10s %4dÃÊ\n", i + 1, playlist[i]->title, playlist[i]->artist, playlist[i]->genre, playlist[i]->play_time);
+        printf("%2d. %-20s %-15s %-10s %4dì´ˆ\n", i + 1, playlist[i]->title, playlist[i]->artist, playlist[i]->genre, playlist[i]->play_time);
         total_time += playlist[i]->play_time;
     }
 
-    printf("ÃÑ Àç»ı½Ã°£: %dÃÊ\n", total_time);
+    printf("ì´ ì¬ìƒì‹œê°„: %dì´ˆ\n", total_time);
 }
