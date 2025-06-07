@@ -1,12 +1,12 @@
-/* ÆÄÀÏ¸í: assign03.c
+/* íŒŒì¼ëª…: assign03.c
 
-  * ³»¿ë: ÆÐ½º¿öµå·Î ·Î±×ÀÎ ±¸Á¶Ã¼¸¦ ¸¸µå´Âµ¥ ±¸Á¶Ã¼¿¡ ÀÖ´Â ·Î±×ÀÎ ¾ÆÀÌµð¿Í ÀÏÄ¡ÇÏ¸é ·Î±×ÀÎ ¼º°øÀ» Ãâ·ÂÇÏ¼¼¿ä. 
+  * ë‚´ìš©: íŒ¨ìŠ¤ì›Œë“œë¡œ ë¡œê·¸ì¸ êµ¬ì¡°ì²´ë¥¼ ë§Œë“œëŠ”ë° êµ¬ì¡°ì²´ì— ìžˆëŠ” ë¡œê·¸ì¸ ì•„ì´ë””ì™€ ì¼ì¹˜í•˜ë©´ ë¡œê·¸ì¸ ì„±ê³µì„ ì¶œë ¥í•˜ì„¸ìš”. 
 
-  * ÀÛ¼ºÀÚ: ÀÌ½ÂÈÆ
+  * ìž‘ì„±ìž: ì´ìŠ¹í›ˆ
 
-  * ³¯Â¥: 2025.05.31
+  * ë‚ ì§œ: 2025.06.07
 
-  * ¹öÀü: v1.0
+  * ë²„ì „: v1.0
 
   */
 
@@ -53,7 +53,7 @@ void Assignment1003()
 
     result = CmpArray(user, inputID, inputPW);
 
-    result == 1 ? printf("·Î±×ÀÎ¼º°ø") : printf("·Î±×ÀÎ½ÇÆÐ");
+    result == 1 ? printf("ë¡œê·¸ì¸ì„±ê³µ") : printf("ë¡œê·¸ì¸ì‹¤íŒ¨");
 
     return;
 }
