@@ -3,19 +3,20 @@
 #include <string.h>
 #include <stdlib.h>
 
-int testStrlen();
-int test_strcpy();
-int str_swap(char* str1, char* str2, int size);
+//int testStrlen();
+//int test_strcpy();
+//int str_swap(char* str1, char* str2, int size);
+int test_string();
 
 int main()
 {
-	test_strcpy();
-	
+	test_string();
+	//test_strcpy();
 	//testStrlen();
 	//printf("Hello, World!\n");
 	return 0;
 }
-
+/*
 #define	STR_SIZE 128
 
 int test_strcpy()
@@ -73,4 +74,41 @@ int testStrlen()
 	printf("%s 의 길이 : %d", name, strlen(name));
 
 	return 0;
+}
+*/
+#define SIZE 128
+int test_string()
+{
+	char in_str[SIZE]= "";
+	char out_str[SIZE] = "";
+
+	printf("Enter string : ");
+	gets_s(in_str, sizeof(in_str));
+
+	//fgets_s(in_str, sizeof(in_str),stdin); -> stdin 키보드 파일
+	//파일에서 읽기 : 경로 지정
+
+	FILE* mycontact = fopen("mycontact.txt","r");
+	if (mycontact == NULL)
+	{
+		printf("Failt to open file");
+		return -1;
+	}
+	while (fgets(in_str, sizeof(in_str), mycontact) != NULL)
+	{
+		//fgets(in_str, sizeof(in_str), mycontact);
+		puts(in_str);
+
+		char* pToken = strtok(in_str, " | , ");
+		if (pToken != 0)
+			puts(pToken);
+		pToken = strtok(NULL, " | , ");
+		if (pToken != 0)
+			puts(pToken);
+		pToken = strtok(NULL, " | , ");
+		if (pToken != 0)
+			puts(pToken);
+	}
+	fclose(mycontact);
+	// strtok_s 기존 static 재진입가능 함수 자르는 이후 주소 저장가능 한 상태였는데  static 없애면서 우리가 직접사용자 지정해서 저장공간 마련
 }
